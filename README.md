@@ -18,20 +18,18 @@ As pessoas que irão ajudar, irão acessar o sistema por um aplicativo mobile e 
 
 ## Instalação
 
+### Clone o projeto e entre na pasta
+
+```bash
+$ git clone https://github.com/fabiosoliveira/be-the-hero.git
+$ cd be-the-hero
+```
+
+### Entre na sub-pasta e instale as dependencias
+
 ```bash
 $ cd backend
-```
-
-Usando npm:
-
-```bash
 $ npm install
-```
-
-Usando yarn:
-
-```bash
-$ yarn install
 ```
 
 > Repita o processo para as respectivas pastas **frontend** e **mobile**
