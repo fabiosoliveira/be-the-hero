@@ -1,3 +1,4 @@
+![Be The Hero](frontend/src/assets/logo.svg)
 # Be The Hero
 Projeto full stack javascript: Utilizando as tecnologias **NodeJs** e **SQL** no back-end, **ReacJs** no front-end, e **React-native** no mobile.
 
