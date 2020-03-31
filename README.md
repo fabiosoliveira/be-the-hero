@@ -1,3 +1,4 @@
+![Be The Hero](frontend/src/assets/logo.svg)
 # Be The Hero
 Projeto full stack javascript: Utilizando as tecnologias **NodeJs** e **SQL** no back-end, **ReacJs** no front-end, e **React-native** no mobile.
 
@@ -6,27 +7,30 @@ Projeto full stack javascript: Utilizando as tecnologias **NodeJs** e **SQL** no
 
 As organizações vão poder fazer seu cadastro no sistema através de uma aplicação web. Vai cadastrar seus dados pessoais e de contato. Após feito o cadastro, entrará no sistema pelo seu ID, e logo depois cadastrar os casos com seu respectivo valor.
 
+![be the hero web](https://user-images.githubusercontent.com/24706908/77971926-66ae2000-72c6-11ea-9aec-408bec86e140.gif)
+
 As pessoas que irão ajudar, irão acessar o sistema por um aplicativo mobile e listar os casos cadastrador. Após selecionar o caso, será redirecionado pra outra tela onde poderá entrar em contato com a ONG através de email ou whatsapp, onde poderá conversar.
+
+![be the hero mobile](https://user-images.githubusercontent.com/24706908/77971916-62820280-72c6-11ea-958b-e70251b37f07.gif)
 
 ## Pré requisitos
 * Nodejs, versão 12
 
 ## Instalação
 
+### Clone o projeto e entre na pasta
+
+```bash
+$ git clone https://github.com/fabiosoliveira/be-the-hero.git
+$ cd be-the-hero
+```
+
+### Entre na sub-pasta e instale as dependencias
+
 ```bash
 $ cd backend
-```
-
-Usando npm:
-
-```bash
 $ npm install
-```
-
-Usando yarn:
-
-```bash
-$ yarn install
+$ npm start
 ```
 
 > Repita o processo para as respectivas pastas **frontend** e **mobile**
