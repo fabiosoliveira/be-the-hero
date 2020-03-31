@@ -44,10 +44,10 @@ $ npm start
     - [x] Tipos de parâmetros.
   - [x] Fazer query builder SQL com banco de dados ***sqlite*** com ***knex***.
   - [x] Adicionar o módulo ***cors*** para segurança da aplicação.
-  - [ ] Fazer validação com a biblioteca ***celebrate***.
-  - [ ] Criar teste da aplicação
-    - [ ] ***jest***
-    - [ ] ***supertest***
+  - [x] Fazer validação com a biblioteca ***celebrate***.
+  - [x] Criar teste da aplicação
+    - [x] ***jest***
+    - [x] ***supertest***
   - [ ] Autenticação ***JWT***.
 - [ ] Front-end da aplicação com ***ReactJS***.
   - [x] Criar projeto com create-react-app.
