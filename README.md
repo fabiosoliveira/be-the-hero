@@ -30,6 +30,7 @@ $ cd be-the-hero
 ```bash
 $ cd backend
 $ npm install
+$ npm start
 ```
 
 > Repita o processo para as respectivas pastas **frontend** e **mobile**
