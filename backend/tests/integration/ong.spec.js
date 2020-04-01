@@ -3,7 +3,6 @@ const app = require('../../src/app')
 const connection = require('../../src/database/connection')
 
 describe('ONG', () => {
-
   beforeEach(async () => {
     await connection.migrate.rollback()
     await connection.migrate.latest()
@@ -26,12 +25,9 @@ describe('ONG', () => {
         })
   
       expect(response.header).toHaveProperty('content-type', expect.stringMatching(/json/))
-      expect(response.header).toMatchObject({ ['content-type']: expect.stringMatching(/json/)})
-      expect(response.header['content-type']).toMatch(/json/)
       expect(response.statusCode).toBe(200)
       expect(response.body).toHaveProperty('id', expect.stringMatching(/^[A-Fa-f0-9]+$/))
       expect(response.body.id).toHaveLength(8)
-      expect(response.body.id).toMatch(/^[A-Fa-f0-9]+$/)
     })
 
     describe('should be able to validate', () => {
@@ -79,6 +75,83 @@ describe('ONG', () => {
         })
       })
 
+      describe('whatsapp', () => {
+        it('is not allowed to be empty', () => {
+          validateField({ 
+            key: 'whatsapp', 
+            value: "", 
+            message: "\"whatsapp\" is not allowed to be empty"
+          })
+        })
+    
+        it('must be a string', () => {
+          validateField({ 
+            key: 'whatsapp', 
+            value: 55, 
+            message: "\"whatsapp\" must be a string"
+          })
+        })
+
+        it('length must be at least 10 characters long', () => {
+          validateField({ 
+            key: 'whatsapp', 
+            value: "555", 
+            message: "\"whatsapp\" length must be at least 10 characters long"
+          })
+        })
+
+        it('length must be less than or equal to 11 characters long', () => {
+          validateField({ 
+            key: 'whatsapp', 
+            value: "54646464646466464655", 
+            message: "\"whatsapp\" length must be less than or equal to 11 characters long"
+          })
+        })
+      })
+
+      describe('city', () => {
+        it('is not allowed to be empty', () => {
+          validateField({ 
+            key: 'city', 
+            value: "", 
+            message: "\"city\" is not allowed to be empty"
+          })
+        })
+    
+        it('must be a string', () => {
+          validateField({ 
+            key: 'city', 
+            value: 55, 
+            message: "\"city\" must be a string"
+          })
+        })
+      })
+
+      describe('uf', () => {
+        it('is not allowed to be empty', () => {
+          validateField({ 
+            key: 'uf', 
+            value: "", 
+            message: "\"uf\" is not allowed to be empty"
+          })
+        })
+    
+        it('must be a string', () => {
+          validateField({ 
+            key: 'uf', 
+            value: 55, 
+            message: "\"uf\" must be a string"
+          })
+        })
+
+        it('length must be 2 characters long', () => {
+          validateField({ 
+            key: 'uf', 
+            value: "SPD", 
+            message: "\"uf\" length must be 2 characters long"
+          })
+        })
+      })
     })
   })
 
